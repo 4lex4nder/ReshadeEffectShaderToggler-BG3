@@ -29,7 +29,7 @@ If you know your way around shaders, you can use this header file to access some
 A port of [Intel's XeGTAO](https://github.com/GameTechDev/XeGTAO) AO shader to ReShade making full use of `bg3_common.fxh`. Applied before fog by default.
 
 ### bg3_xegtao_gi.fx
-My poor, barebones attempt at using [visibility bitmasks](https://arxiv.org/abs/2301.11376) hacked into XeGTAO for AO and GI.  Applied before fog by default.
+My poor, barebones attempt at using [visibility bitmasks](https://arxiv.org/abs/2301.11376) hacked into XeGTAO for AO and GI. Requires `bg3_crashpad.fx` running before it. Applied before fog by default.
 
 ### bg3_crashpad.fx
 A helper shader providing the game's normals and motion vectors in known formats. Executed before fog by default.
