@@ -6,6 +6,7 @@ REST config for Baldur's Gate 3
 * ReShade >= 5.9.1
 * Baldur's Gate 3 running in DX11 mode
 * Have the "Subsurface Scattering" Video option enabled
+* Use TAA or DLSS
 
 ## What does it do
 * Applies effects before the UI is rendered by default. 
