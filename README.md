@@ -3,7 +3,7 @@ REST config for Baldur's Gate 3
 
 ## Requirements
 * [REST v1.2.7](https://github.com/4lex4nder/ReshadeEffectShaderToggler/releases/tag/v1.2.7)
-* ReShade >= 5.9.1
+* [ReShade](https://reshade.me/) >= 5.9.1
 * Baldur's Gate 3 running in DX11 mode
 * Have the "Subsurface Scattering" Video option enabled
 * Use TAA or DLSS
