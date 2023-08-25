@@ -33,10 +33,10 @@ uniform bool SHOWME <
 
 namespace Deferred {
     texture MotionVectorsTex { Width = BUFFER_WIDTH;   Height = BUFFER_HEIGHT;   Format = RG16F; };
-    sampler sMotionVectorsTex         { Texture = MotionVectorsTex;  };
+    sampler sMotionVectorsTex { Texture = MotionVectorsTex;  };
     
-    texture NormalsTex              { Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RG8; };
-    sampler sNormalsTex             { Texture = NormalsTex; };
+    texture NormalsTex { Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RG8; };
+    sampler sNormalsTex { Texture = NormalsTex; };
 }
 
 texture texNativeMotionVectors : MOTION;
@@ -49,8 +49,8 @@ sampler sNativeNormals { Texture = texNativeNormals; };
 texture texClr : COLOR;
 sampler sClr { Texture = texClr; };
 
-texture texMotionVectors          { Width = BUFFER_WIDTH;   Height = BUFFER_HEIGHT;   Format = RG16F; };
-sampler sMotionVectorTex         { Texture = texMotionVectors;  };
+texture texMotionVectors { Width = BUFFER_WIDTH;   Height = BUFFER_HEIGHT;   Format = RG16F; };
+sampler sMotionVectorTex { Texture = texMotionVectors;  };
 
 
 /*=============================================================================
@@ -106,9 +106,7 @@ void PSOut(in VSOUT i, out float4 o : SV_Target0)
 
 void PSWriteVectors(in VSOUT i, out float2 o : SV_Target0, out float2 p : SV_Target1, out float2 q : SV_Target2)
 {
-    float d = tex2D(ReShade::DepthBuffer, i.uv).r;
     o = -tex2D(sNativeMotionVectorTex, i.uv).xy * ReShade::PixelSize;
-    
     p = o;
     q = tex2D(sNativeNormals, i.uv).xy;
     
